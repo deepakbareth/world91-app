@@ -1,4 +1,5 @@
-import { NewsContext } from '@/app/context/NewsContext'; // Make sure this path is right!
+import { Link } from 'expo-router';
+import { NewsContext } from '../../.expo/context/NewsContext';
 import React, { useContext } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
@@ -22,10 +23,12 @@ export default function LatestNews() {
         <View style={styles.redLine} />
         <Text style={styles.sectionHeaderText}>LATEST INTELLIGENCE</Text>
       </View>
+    
 
       {/* --- NEWS LIST --- */}
       {/* 4. Now we can safely map over the 'news' array */}
       {news.map((item) => (
+        <Link href={`/article/${item.id}`} asChild key={item.id}>
         <View key={item.id} style={styles.articleCard}>
           
           <View style={styles.textContent}>
@@ -45,6 +48,7 @@ export default function LatestNews() {
           />
           
         </View>
+        </Link>
       ))}
 
     </View>
@@ -76,7 +80,11 @@ const styles = StyleSheet.create({
   },
   articleCard: {
     flexDirection: 'row',
+    padding: 12,
     justifyContent: 'space-between',
+    borderColor: '#555555',
+    borderWidth: 1,
+    borderRadius: 8,
     marginBottom: 24, 
   },
   textContent: {
