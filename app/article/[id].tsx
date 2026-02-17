@@ -9,10 +9,31 @@ export default function ArticleScreen() {
     const { id } = useLocalSearchParams();
     const context = useContext(NewsContext);
     const router = useRouter();
+    console.log('context',context);
+
+    interface contextType{
+        news: {
+            id: string;
+            category: string;
+            source: string;
+            title: string;
+            snippet: string;
+            image: string;
+        }[]
+    }
+    interface NewsType {
+        id: string;
+        category: string;
+        source: string;
+        title: string;
+        snippet: string;
+        image: string;
+    }
+    
 
     // Find the specific article and filter out the rest for the "Related" section
-    const article = (context as any)?.news?.find((item: any) => item.id === id);
-    const relatedArticles = (context as any)?.news?.filter((item: any) => item.id !== id);
+    const article = (context as contextType)?.news?.find((item: NewsType) => item.id === id);
+    const relatedArticles = (context as contextType)?.news?.filter((item: NewsType) => item.id !== id);
 
     // Safety check if the article isn't found
     if (!article) {
@@ -27,6 +48,7 @@ export default function ArticleScreen() {
         );
     }
 
+  
     return (
         <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
 
