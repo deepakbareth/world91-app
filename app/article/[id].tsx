@@ -3,7 +3,7 @@ import { Link, useLocalSearchParams, useRouter } from 'expo-router';
 import React, { useContext } from 'react';
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-import { NewsContext } from '../../.expo/context/NewsContext';
+import { NewsContext } from '@/components/context/NewsContext';
 
 export default function ArticleScreen() {
     const { id } = useLocalSearchParams();
