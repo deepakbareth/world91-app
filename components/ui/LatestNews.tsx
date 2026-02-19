@@ -1,7 +1,7 @@
 import { Link } from 'expo-router';
-import { NewsContext } from '../../.expo/context/NewsContext';
 import React, { useContext } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { NewsContext } from '../../.expo/context/NewsContext';
 
 export default function LatestNews() {
   // 1. Grab the whole context object
