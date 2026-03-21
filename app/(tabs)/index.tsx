@@ -1,16 +1,17 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Header from '../../components/ui/Header'; // Imported from your components folder
-import CategoryBar from '../../components/ui/CategoryBar'; // Imported from your components folder
+import ElectionSchedule from '@/components/ui/Election_section/ElectionSchedule/ElectionSchedule';
+import ElectionStates from '@/components/ui/Election_section/electionstates/ElectionStates';
+import ResultsGrid from '@/components/ui/Election_section/ResultSection/ResultsGrid';
 import FeaturedCard from '@/components/ui/FeaturedCard';
 import LatestNews from '@/components/ui/LatestNews';
+import { ScrollView, StyleSheet } from 'react-native';
+import CategoryBar from '../../components/ui/CategoryBar'; // Imported from your components folder
 
 
 export default function HomeScreen() {
   return (
-<ScrollView 
+    <ScrollView
       style={styles.container}
-      showsVerticalScrollIndicator={false} 
+      showsVerticalScrollIndicator={false}
     >
       {/* 1. Header Component (Logo & Search) */}
       {/* <Header />    // becouse i have header in the main layout so i dont need to add it here */}
@@ -20,6 +21,9 @@ export default function HomeScreen() {
 
       {/* 3. Featured Content Card */}
       <FeaturedCard />
+      <ElectionStates />
+      <ResultsGrid />
+      <ElectionSchedule />
       <LatestNews />
 
     </ScrollView>
