@@ -34,6 +34,7 @@ const ElectionRow = ({ item }: { item: ElectionDetail }) => {
 
 const styles = StyleSheet.create({
     card: {
+         
         backgroundColor: '#fff',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -65,11 +66,13 @@ const styles = StyleSheet.create({
         marginRight: 8,
     },
     stateName: {
+
         fontSize: 18,
         fontWeight: '700',
         color: '#1a1a1a',
     },
     subText: {
+        
         fontSize: 16,
         fontWeight: '500',
         color: '#383838',
@@ -79,6 +82,7 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
     },
     resultLabel: {
+        
         fontSize: 16,
         paddingBottom: 4,
         color: '#999',
@@ -92,15 +96,19 @@ const styles = StyleSheet.create({
     },
     badge: {
         // backgroundColor: '#FFF5F5',
-        paddingHorizontal: 10,
-        paddingVertical: 2,
+        paddingHorizontal: 5,
+        // paddingVertical: 2,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         // borderRadius: 20,
         // borderWidth: 1,
         // borderColor: '#FFEBEE',
     },
     badgeText: {
         color: '#D32F2F',
-        fontSize: 10,
+        fontSize: 16,
+       fontFamily: 'sans-serif',
         fontWeight: 'bold',
     },
 });

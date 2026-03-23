@@ -34,7 +34,9 @@ const ElectionSchedule = () => {
 
 const styles = StyleSheet.create({
   safeArea: {
-   
+  
+        borderWidth: 2,
+        borderColor: '#FFEBEE',
     backgroundColor: '#F8F9FA', // Light grey background makes white cards pop
   },
   container: {

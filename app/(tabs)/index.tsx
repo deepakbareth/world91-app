@@ -1,5 +1,6 @@
 import ElectionSchedule from '@/components/ui/Election_section/ElectionSchedule/ElectionSchedule';
 import ElectionStates from '@/components/ui/Election_section/electionstates/ElectionStates';
+import CandidateList from '@/components/ui/Election_section/Major_Candidates/CandidateList';
 import ResultsGrid from '@/components/ui/Election_section/ResultSection/ResultsGrid';
 import FeaturedCard from '@/components/ui/FeaturedCard';
 import LatestNews from '@/components/ui/LatestNews';
@@ -24,7 +25,12 @@ export default function HomeScreen() {
       <ElectionStates />
       <ResultsGrid />
       <ElectionSchedule />
+      <CandidateList />
+
+<hr />
+
       <LatestNews />
+
 
     </ScrollView>
   );

@@ -82,7 +82,7 @@ const ResultsGrid: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {  backgroundColor: '#f8f9fa' ,paddingBottom: 20  },
+  container: {  backgroundColor: '#f8f9fa' ,paddingBottom: 20 ,borderWidth: 2, borderColor: '#FFEBEE' },
   topHeader: { flexDirection: 'row', padding: 20, alignItems: 'center', justifyContent: 'space-between' },
   mainTitle: { fontSize: 20, fontWeight: 'bold' },
   liveBadge: { backgroundColor: 'red', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 4 },
