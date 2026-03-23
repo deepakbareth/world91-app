@@ -58,9 +58,9 @@ const ElectoralStates: React.FC = () => {
       <View style={styles.gridContainer}>
         {ELECTION_DATA.map((item) => (
           <View key={item.id} style={styles.column}>
-            <StateCard 
-              item={item} 
-              onPress={() => console.log(`Clicked: ${item.stateName}`)} 
+            <StateCard
+              item={item}
+              onPress={() => console.log(`Clicked: ${item.stateName}`)}
             />
           </View>
         ))}
@@ -71,7 +71,7 @@ const ElectoralStates: React.FC = () => {
 
 const styles = StyleSheet.create({
   mainContainer: {
-   
+
     backgroundColor: '#fff',
     paddingVertical: 16,
   },
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
 export default ElectoralStates;
 
 
-//  if you want to slide the state then below code is for you but if you want to show the state in grid then use above code 
+//  if you want to slide the state then below code is for you but if you want to show the state in grid then use above code
 
 
 // import React from 'react';
@@ -182,8 +182,8 @@ export default ElectoralStates;
 //       </View>
 
 //       {/* Horizontal Slider */}
-//       <ScrollView 
-//         horizontal 
+//       <ScrollView
+//         horizontal
 //         showsHorizontalScrollIndicator={false}
 //         contentContainerStyle={styles.scrollContainer}
 //         // These props create the "snap-to-card" sliding effect
@@ -192,9 +192,9 @@ export default ElectoralStates;
 //       >
 //         {ELECTION_DATA.map((item) => (
 //           <View key={item.id} style={styles.cardWrapper}>
-//             <StateCard 
-//               item={item} 
-//               onPress={() => console.log(`Clicked: ${item.stateName}`)} 
+//             <StateCard
+//               item={item}
+//               onPress={() => console.log(`Clicked: ${item.stateName}`)}
 //             />
 //           </View>
 //         ))}

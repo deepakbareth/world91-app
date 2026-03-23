@@ -38,13 +38,13 @@ const StateCard: React.FC<StateCardProps> = ({ item, onPress }) => {
           <Text style={styles.stateText} numberOfLines={1}>
             {item.stateName}
           </Text>
-          
+
           <View style={styles.infoRow}>
             <View style={styles.iconGroup}>
               <MaterialCommunityIcons name="calendar-month" size={12} color="#FF4D4D" />
               <Text style={styles.infoText}>{item.date}</Text>
             </View>
-            
+
             <View style={styles.iconGroup}>
               <MaterialCommunityIcons name="view-grid-outline" size={12} color="#FF4D4D" />
               <Text style={styles.infoText}>{item.seats}</Text>
